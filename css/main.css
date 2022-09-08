@@ -1,4 +1,4 @@
-/* Указываем box sizing */
+Указываем box sizing
 *,
 *::before,
 *::after {
@@ -33,8 +33,6 @@ dd {
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
   font-family: 'Merriweather', serif;
   font-size: 20px;
 }
@@ -56,11 +54,6 @@ img {
   display: block;
 }
 
-/* Указываем понятную периодичность в потоке данных у article*/
-article > * + * {
-  margin-top: 1em;
-}
-
 /* Наследуем шрифты для инпутов и кнопок */
 input,
 button,
@@ -75,7 +68,14 @@ a {
 }
 
 .header {
-    background-image: url(/img/header-bg.jpg);
+    background-image: url(/img/header-bg.png);
+    background-position: bottom;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headerRow {
     height: 100vh;
 }
 
@@ -87,7 +87,6 @@ a {
 .nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding-top: 20px;
 }
 
@@ -99,6 +98,12 @@ a {
 .logoImg {
     width: 100px;
     border-radius: 50%;
+    margin-right: 50px;
+}
+
+.shortName {
+    font-weight: 700;
+    font-size: 50px;
     margin-right: 100px;
 }
 
@@ -110,4 +115,26 @@ a.navListText {
   font-weight: 500;
 }
 
-.headerContent {}
+.headerContent {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 100%; 
+}
+
+.headerUpperText {
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.headerMiddleText {
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.headerSocial {
+    margin-bottom: 120px;
+}
+
