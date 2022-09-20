@@ -1,10 +1,5 @@
 // Массив с фразами
-const phrases = [
-    "Нургиса",
-    "начинающий FrontEnd разработчик",
-    "автолюбитель",
-    "фотограф - любитель"
-];
+const phrases = ["автолюбитель", "начинающий FrontEnd разработчик", "Нургиса", "фотограф - любитель"];
 
 // Дотягиваюсь к фразе на странице
 let phrase = document.querySelector(".phrase");
@@ -19,8 +14,10 @@ function getRandomElement (arr) {
 let randomElement = getRandomElement(phrases);
 
 // Заменяю текст на странице рандомным элементом
-// phrase.textContent = getRandomElement(phrases);
+phrase.textContent = getRandomElement(phrases);
 
-for (let i = 0; i <= 10; i = i + 1) {
-    smoothly(phrase, "textContent", randomElement[i]);
-}
+for (let i = 0; i <= 3; i++) {
+    // smoothly(phrase, "textContent", randomElement[i]);
+    console.log(phrases[i]);
+};
+
