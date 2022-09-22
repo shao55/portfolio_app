@@ -17,7 +17,7 @@ let randomElement = getRandomElement(phrases);
 phrase.textContent = getRandomElement(phrases);
 
 for (let i = 0; i <= 3; i++) {
-    // smoothly(phrase, "textContent", randomElement[i]);
-    console.log(phrases[i]);
+    smoothly(phrase, "textContent", randomElement);
+    // console.log(phrases[i]);
 };
 
