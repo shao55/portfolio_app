@@ -1,23 +1,22 @@
 // Массив с фразами
-const phrases = ["автолюбитель", "начинающий FrontEnd разработчик", "Нургиса", "фотограф - любитель"];
+const phrases = ["начинающий FrontEnd разработчик", "автолюбитель", "фотограф - любитель", "гражданин мира"];
 
 // Дотягиваюсь к фразе на странице
 let phrase = document.querySelector(".phrase");
 
-// Функция - рандомный текст
-function getRandomElement (arr) {
-    let randIndex = Math.floor(Math.random()*arr.length);
-    return(arr[randIndex]);
-};
+// Начальный индекс для перебора
+let phrasesStart = 0;
 
-// Кладем рандомную фразу в переменную
-let randomElement = getRandomElement(phrases);
+// Длина массива
+let phrasesCount = phrases.length - 1;
 
-// Заменяю текст на странице рандомным элементом
-phrase.textContent = getRandomElement(phrases);
-
-for (let i = 0; i <= 3; i++) {
-    smoothly(phrase, "textContent", randomElement);
-    // console.log(phrases[i]);
-};
-
+// сетИнтервал, в которой меняем через smoothly фразу каждые 2 секунды
+setInterval( function () {
+    smoothly(phrase, "textContent", phrases[phrasesStart]);
+    // phrase.textContent = phrases[phrasesStart];
+    if(phrasesStart == phrasesCount) {
+        phrasesStart = 0;
+    } else {
+        phrasesStart++;
+    };
+}, 2000);

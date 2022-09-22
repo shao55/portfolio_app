@@ -138,3 +138,12 @@ a.navListText {
     margin-bottom: 120px;
 }
 
+.aboutMe {
+  padding-top: 110px;
+  display: flex;
+  justify-content: space-around;
+}
+.aboutMePhoto {
+  max-width: 30%;
+  border: 10px solid rgb(211,211,211);
+}
