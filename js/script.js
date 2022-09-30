@@ -20,3 +20,9 @@ setInterval( function () {
         phrasesStart++;
     };
 }, 2000);
+
+let num = 1.36666;
+let fixedNum = Number(num.toFixed(2));
+
+console.log(fixedNum);
+console.log(typeof(fixedNum));
