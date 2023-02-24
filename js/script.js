@@ -1,5 +1,7 @@
+// *Поочередная замена текста*
+
 // Массив с фразами
-const phrases = ["начинающий FrontEnd разработчик", "автолюбитель", "фотограф - любитель", "гражданин мира"];
+const phrases = ["I build things for the web", "Junior frontEnd developer", "Car lover", "World citizen"];
 
 // Дотягиваюсь к фразе на странице
 let phrase = document.querySelector(".phrase");
@@ -24,5 +26,21 @@ setInterval( function () {
 let num = 1.36666;
 let fixedNum = Number(num.toFixed(2));
 
-console.log(fixedNum);
-console.log(typeof(fixedNum));
+// *Плавный переход по секциям*
+
+const navLinks = document.querySelectorAll('nav a');
+const sections = document.querySelectorAll('section');
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const targetId = link.getAttribute('href');
+    const targetSection = document.querySelector(targetId);
+    const targetOffsetTop = targetSection.offsetTop;
+
+    window.scrollTo({
+      top: targetOffsetTop,
+      behavior: 'smooth',
+    });
+  });
+});
