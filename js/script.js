@@ -1,7 +1,7 @@
 // *Поочередная замена текста*
 
 // Массив с фразами
-const phrases = ["I build things for the web", "Junior frontEnd developer", "Car lover", "World citizen"];
+const phrases = ["i build things for the web", "junior frontend developer", "car lover", "world citizen"];
 
 // Дотягиваюсь к фразе на странице
 let phrase = document.querySelector(".phrase");
@@ -44,3 +44,78 @@ navLinks.forEach((link) => {
     });
   });
 });
+
+// *Плановное изменение фона на активной секции*
+
+function setActiveSection() {
+  // const scrollTop = window.pageYOffset;
+
+  // sections.forEach((section) => {
+  //   const offsetTop = section.offsetTop;
+  //   const height = section.offsetHeight;
+
+  //   if (scrollTop >= offsetTop && scrollTop < offsetTop + height) {
+  //     section.classList.add('active');
+  //   } else {
+  //     section.classList.remove('active');
+  //   }
+  // });
+
+  const scrollTop = window.pageYOffset;
+  const windowHeight = window.innerHeight;
+  const screenMiddle = scrollTop + (windowHeight / 2);
+
+  sections.forEach((section) => {
+    const offsetTop = section.offsetTop;
+    const height = section.offsetHeight;
+
+    if (screenMiddle >= offsetTop && screenMiddle < offsetTop + height) {
+      section.classList.add('active');
+    } else {
+      section.classList.remove('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', setActiveSection);
+
+// *Появление / скрытие кнопки "наверх"*
+
+const btnUp = document.querySelector('.btn-up');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 0) {
+    btnUp.style.display = 'block';
+  } else {
+    btnUp.style.display = 'none';
+  }
+});
+
+// *Скролл наверх при нажатии на кнопку*
+
+btnUp.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// *Загрузка резюме по нажатию на кнопку*
+
+// Дотягиваемся до кнопки
+const downloadBtn = document.getElementById('cv');
+// Слушатель на кнопке при клике вызывает функцию
+downloadBtn.addEventListener('click', () => {
+  // Создаем элемент anchor
+  const link = document.createElement('a');
+  // Указываем href для anchor'a
+  link.href = '../files/Profile.pdf';
+  // Загрузка файла
+  link.download = 'Profile.pdf';
+  // appendChild добавляет в конце кнопки #cv элемент link
+  document.body.appendChild(link);
+  // Вызываем клик по кнопке
+  link.click();
+  // Удаляем элемент
+  document.body.removeChild(link);
+})

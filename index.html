@@ -8,45 +8,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Kanit:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
     <title>Иткаринов Нургиса | Портфолио</title>
 </head>
 <body>
     <header>
-        <nav>
-          <ul>
-            <li><a href="#section1">About</a></li>
-            <li><a href="#section2">Experience</a></li>
-            <li><a href="#section3">Projects</a></li>
-            <li><a href="#section4">Contacts</a></li>
-          </ul>
-        </nav>
+      <div class="container">
+        <div class="header_wrapper">
+          <div class="header_logo">
+            <img class="logo_img" src="./img/logo.jpg" alt="logo" srcset="">
+            <h2>Nurgissa <br>Itkarinov</h2>
+          </div>
+          <nav class="active">
+            <ul>
+              <li><a href="#section1">About</a></li>
+              <li><a href="#section2">Experience</a></li>
+              <li><a href="#section3">Projects</a></li>
+              <li><a href="#section4">Contacts</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
-      
     <main>
-        <section id="section1">
+        <section class="active" id="section1">
             <div class="container">
                 <div class="headerContent">
-                    <div class="headerUpperText">
-                        Hi,
-                    </div>
-                    <div class="headerMiddleText">
-                        <span>I'm, </span>
-                        <span class="phrase">Nurgissa</span>
-                    </div>
+                  <h1 style="margin-bottom: 32px;">
+                    Hi, I'm Nurgissa Itkarinov, <br><span class="phrase">I build things for the web</span>
+                  </h1>
+                  <p style="margin-bottom: 40px;">I'm frontend developer and this is my portfolio</p>
+                  <button id="cv">Check out my CV</button>
                 </div>
+                <button class="btn-up"><img src="./img/up.png" alt="" srcset=""></button>
             </div>
         </section>
         <section id="section2">
-          <h2>Раздел 2</h2>
-          <p>Содержимое раздела 2</p>
+          <div class="container">
+            <h2>Раздел 2</h2>
+            <p>Содержимое раздела 2</p>
+          </div>
         </section>
         <section id="section3">
-          <h2>Раздел 3</h2>
-          <p>Содержимое раздела 3</p>
-        </section>
-        <section id="section4">
+          <div class="container">
             <h2>Раздел 3</h2>
             <p>Содержимое раздела 3</p>
+
+          </div>
+        </section>
+        <section id="section4">
+          <div class="container">
+            <h2>Раздел 3</h2>
+            <p>Содержимое раздела 3</p>
+
+          </div>
           </section>
     </main>
 
