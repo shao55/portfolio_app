@@ -30,7 +30,7 @@ let fixedNum = Number(num.toFixed(2));
 
 const navLinks = document.querySelectorAll('nav a');
 const sections = document.querySelectorAll('section');
-
+// Для всех линков делаем эвентлистнер и навешиваем логику по клику
 navLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
     event.preventDefault();
@@ -48,19 +48,6 @@ navLinks.forEach((link) => {
 // *Плановное изменение фона на активной секции*
 
 function setActiveSection() {
-  // const scrollTop = window.pageYOffset;
-
-  // sections.forEach((section) => {
-  //   const offsetTop = section.offsetTop;
-  //   const height = section.offsetHeight;
-
-  //   if (scrollTop >= offsetTop && scrollTop < offsetTop + height) {
-  //     section.classList.add('active');
-  //   } else {
-  //     section.classList.remove('active');
-  //   }
-  // });
-
   const scrollTop = window.pageYOffset;
   const windowHeight = window.innerHeight;
   const screenMiddle = scrollTop + (windowHeight / 2);

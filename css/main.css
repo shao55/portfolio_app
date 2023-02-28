@@ -8,6 +8,8 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -35,6 +37,7 @@ h1, h2 {
 
 .container {
   margin: 0 5%;
+  width: 100%;
 }
 #cv {
   padding: 16px 24px;
@@ -95,4 +98,18 @@ section:not(.active), nav:not(.active) {
   height: 64px;
   border-radius: 50%;
   margin-right: 10px;
+}
+.about_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about_desc {
+  max-width: 1000px;
+}
+.about_desc ul li {
+  list-style-type: none;
+}
+.about_img img {
+  height: 400px;
 }
