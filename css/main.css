@@ -14,7 +14,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #3a1163;
+  background-color: #495670;
   z-index: 1;
 }
 
@@ -52,7 +52,7 @@ h1, h2 {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -62,7 +62,7 @@ nav li:not(:last-child){
   margin-right: 32px;
 }
 section.active, nav.active {
-  background-color: #3a1163;
+  background-color: #495670;
 }
 section:not(.active), nav:not(.active) {
   background-color: #130125;
@@ -112,4 +112,6 @@ section:not(.active), nav:not(.active) {
 }
 .about_img img {
   height: 400px;
+  margin-left: 200px;
+  border: 4px solid #FD5A14;
 }
